@@ -1,5 +1,6 @@
 package com.enjay.jetpacktutorial
 
+import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Patterns
@@ -31,6 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
 import com.enjay.jetpacktutorial.ui.theme.JetpackTutorialTheme
+import com.enjay.jetpacktutorial.ui.theme.Row_Column
 import com.enjay.jetpacktutorial.ui.theme.Shapes
 import java.util.regex.Pattern
 
@@ -39,6 +41,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             greet()
+            startActivity(Intent(MainActivity@this, Row_Column::class.java))
         }
     }
 
